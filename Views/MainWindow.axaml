@@ -1,0 +1,38 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Melodica.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="400"
+        Height="400" Width="300"
+        x:Class="Melodica.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Melodica"
+        Classes="black">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+    
+    <StackPanel>
+        <!-- Tab Menu (Playlist) -->
+        <Grid Background="Gray" Height="40" ColumnDefinitions="Auto, Auto, *, *">
+            <Rectangle Grid.Column="0" Fill="Aqua" Height="40" Width="80"></Rectangle>
+            <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Library</TextBlock>
+            <Rectangle Grid.Column="1" Fill="GreenYellow" Height="40" Width="80"></Rectangle>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">Ultimato</TextBlock>
+            <Rectangle Grid.Column="2" Fill="DarkRed" Height="40"></Rectangle>
+            <Rectangle Grid.Column="3" Fill="LightBlue" Height="40"></Rectangle>
+            <TextBlock Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">+</TextBlock>
+        </Grid>
+        
+        <!-- Music List -->
+        <ListBox Margin="20" x:Name="Songs"/>
+        
+        <!-- Music Controls -->
+        <Grid>
+            
+        </Grid>
+    </StackPanel>
+
+</Window>
